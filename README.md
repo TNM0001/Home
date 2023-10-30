@@ -1,1 +1,1 @@
-# Home
+Enter the code to enter the world.
