@@ -2,6 +2,10 @@ let runningTotal = 0;
 let buffer = "0";
 let previousOperator = null;
 
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+})
+
 const screen = document.querySelector('.screen');
 
 function buttonClick(value){
