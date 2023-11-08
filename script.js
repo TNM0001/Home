@@ -41,6 +41,10 @@ function buttonClick(value){
     if (buffer === '7530' && value === '=') {
         window.location.href = 'https://tnm.lol';
     }
+
+    if (buffer === '8008' && value === '=') {
+        displayRandomPicture();
+    }
 }
 
 function handleSymbol(symbol){
@@ -110,6 +114,13 @@ function handleNumber(numberString){
     }else{
         buffer += numberString;
     }
+}
+
+function displayRandomPicture() {
+    const pictureNames = ['pic1.png', 'pic2.png', 'pic3.png', 'pic4.png', 'pic5.png', 'pic6.png', 'pic7.png', 'pic8.png'];
+    const randomPicture = pictureNames[Math.floor(Math.random() * pictureNames.length)];
+    const imagePath = `assets/${randomPicture}`;
+    document.getElementById('displayedImage').src = imagePath;
 }
 
 function init(){
