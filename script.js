@@ -117,7 +117,7 @@ function handleNumber(numberString){
 }
 
 function displayRandomPicture() {
-    const pictureNames = ['pic1.png', 'pic2.jpg', 'pic3.png', 'pic4.png', 'pic5.png', 'pic6.png', 'pic7.png', 'pic8.png'];
+    const pictureNames = ['pic1.png', 'pic2.png', 'pic3.png', 'pic4.png', 'pic5.png', 'pic6.png', 'pic7.png', 'pic8.png'];
     const randomPicture = pictureNames[Math.floor(Math.random() * pictureNames.length)];
     const imagePath = `assets/${randomPicture}`;
     document.getElementById('displayedImage').src = imagePath;
