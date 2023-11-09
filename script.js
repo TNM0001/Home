@@ -42,6 +42,10 @@ function buttonClick(value){
         window.location.href = 'https://tnm.lol';
     }
 
+    if (buffer === '9012' && value === '=') {
+        window.location.href = 'https://nsfw.tnm.lol';
+    }
+
     if (buffer === '8008' && value === '=') {
         displayRandomPicture();
     }
