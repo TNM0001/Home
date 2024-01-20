@@ -28,6 +28,15 @@ document.onkeydown = function (e) {
     }
 };
 
+document.getElementById('menuButton').addEventListener('click', function() {
+    var menu = document.getElementById('menuSection');
+    if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+});
+
 const screen = document.querySelector('.screen');
 
 function buttonClick(value){
@@ -38,16 +47,8 @@ function buttonClick(value){
     }
     screen.innerText = buffer;
 
-    if (buffer === '7530' && value === '=') {
-        window.location.href = 'https://tnm.lol';
-    }
-
     if (buffer === '8008' && value === '=') {
         displayRandomPicture();
-    }
-	
-	if (buffer === '9012' && value === '=') {
-        window.location.href = 'https://nsfw.tnm.lol';
     }
 }
 
@@ -121,7 +122,7 @@ function handleNumber(numberString){
 }
 
 function displayRandomPicture() {
-    const pictureNames = ['pic1.png', 'pic2.png', 'pic3.png', 'pic4.png', 'pic5.png', 'pic6.png', 'pic7.png', 'pic8.png'];
+    const pictureNames = ['pic1.png', 'pic2.png', 'pic3.png', 'pic4.png', 'pic5.png', 'pic6.png', 'pic7.png', 'pic8.png', 'pic9.png', 'pic10.jpg', 'pic11.png', 'pic12.jpg'];
     const randomPicture = pictureNames[Math.floor(Math.random() * pictureNames.length)];
     const imagePath = `assets/${randomPicture}`;
     document.getElementById('displayedImage').src = imagePath;
